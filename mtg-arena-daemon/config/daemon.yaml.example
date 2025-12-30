@@ -1,0 +1,54 @@
+# MTG Arena Deck Monitor Daemon Configuration
+
+# Path to MTG Arena Player.log file
+# Windows default: C:\Users\<Username>\AppData\LocalLow\Wizards Of The Coast\MTGA\Player.log
+# For development/testing, you can use a local test file
+log_file_path: "C:\\Users\\<Username>\\AppData\\LocalLow\\Wizards Of The Coast\\MTGA\\Player.log"
+
+# Alternative path for Player-prev.log (previous session)
+# prev_log_file_path: "C:\\Users\\<Username>\\AppData\\LocalLow\\Wizards Of The Coast\\MTGA\\Player-prev.log"
+
+# Export directory for deck files
+export_directory: "./exports"
+
+# Export format options
+export_format:
+  # Export as JSON
+  json: true
+  # Export as plain text deck list
+  text: true
+  # Export as MTGA deck format
+  mtga: true
+
+# Monitoring options
+monitor:
+  # Poll interval in seconds
+  poll_interval: 2
+  # Watch for file changes
+  watch_enabled: true
+  # Parse entire log on startup
+  parse_on_startup: true
+
+# Logging options
+logging:
+  # Log level: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  level: "INFO"
+  # Log file path
+  file: "./logs/daemon.log"
+  # Console output
+  console: true
+  # Max log file size (MB)
+  max_size_mb: 10
+  # Number of backup log files to keep
+  backup_count: 5
+
+# Deck export options
+deck_export:
+  # Export deck on detection
+  auto_export: true
+  # Include sideboard in export
+  include_sideboard: true
+  # Include deck metadata
+  include_metadata: true
+  # Timestamp format for export filenames
+  timestamp_format: "%Y%m%d_%H%M%S"

@@ -1,0 +1,22 @@
+# MTG Arena Deck Monitor Daemon Dependencies
+
+# Configuration management
+PyYAML>=6.0.1
+
+# File monitoring
+watchdog>=3.0.0
+
+# JSON handling (standard library, but listed for documentation)
+# json
+
+# Logging (standard library)
+# logging
+
+# Date/time handling (standard library)
+# datetime
+
+# Regular expressions (standard library)
+# re
+
+# Path handling (standard library)
+# pathlib
