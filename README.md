@@ -31,6 +31,7 @@ ManaScanner helps Magic: The Gathering players and collectors digitize, organize
 - 💰 **Price Tracking** - Monitor card values and market trends
 - 📱 **Mobile Friendly** - Scan on the go
 - 🎴 **Deck Building** - Build and organize your decks
+- 🤖 **MTG Arena Integration** - Automatic deck export daemon for MTG Arena players
 
 ## 📥 Download
 
@@ -132,6 +133,14 @@ For developers and early adopters:
 2. Create a new deck
 3. Search for cards or add from your collection
 4. Save and manage your deck lists
+
+#### MTG Arena Integration
+
+For MTG Arena players, we provide an automatic deck monitoring daemon:
+
+1. Navigate to the **mtg-arena-daemon** directory
+2. Follow the instructions in the [MTG Arena Daemon README](mtg-arena-daemon/README.md)
+3. The daemon will automatically export your Arena decks for use with ManaScanner
 
 ## 🛠️ Development Setup
 
