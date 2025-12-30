@@ -6,7 +6,6 @@ The log file contains JSON blocks with deck data that can be extracted and expor
 """
 
 import json
-import re
 import logging
 from typing import List, Dict, Optional, Any
 from datetime import datetime
@@ -19,15 +18,6 @@ class LogParser:
         """Initialize the log parser."""
         self.logger = logging.getLogger(__name__)
         self.last_position = 0
-        
-        # Common patterns for deck-related JSON blocks
-        self.deck_patterns = [
-            r'"GetDeckLists',
-            r'"Deck\.GetDeckListsV3',
-            r'"PlayerInventory\.GetPlayerDecks',
-            r'"mainDeck"',
-            r'"sideboard"',
-        ]
     
     def extract_json_blocks(self, log_content: str) -> List[Dict[str, Any]]:
         """

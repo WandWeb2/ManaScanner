@@ -6,6 +6,7 @@ This file demonstrates the basic functionality of the daemon components.
 """
 
 import json
+import tempfile
 from pathlib import Path
 from log_parser import LogParser
 from deck_exporter import DeckExporter
@@ -64,8 +65,8 @@ def test_deck_exporter(decks):
     print("Testing Deck Exporter")
     print("=" * 60)
     
-    # Create exporter
-    export_dir = Path("/tmp/mtg-arena-test-exports")
+    # Create exporter with temporary directory
+    export_dir = Path(tempfile.mkdtemp(prefix="mtg-arena-test-"))
     exporter = DeckExporter(str(export_dir))
     
     print(f"\nExport directory: {export_dir}")

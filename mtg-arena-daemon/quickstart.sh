@@ -40,7 +40,15 @@ echo ""
 if [ ! -f "config/daemon.yaml" ]; then
     echo "Creating default configuration..."
     mkdir -p config
-    cp config/daemon.yaml.example config/daemon.yaml
+    
+    # Check if example config exists
+    if [ -f "config/daemon.yaml.example" ]; then
+        cp config/daemon.yaml.example config/daemon.yaml
+    else
+        echo "Error: config/daemon.yaml.example not found"
+        exit 1
+    fi
+    
     echo ""
     echo "⚠️  IMPORTANT: Please edit config/daemon.yaml and update the log_file_path"
     echo "   with your actual MTG Arena Player.log location"

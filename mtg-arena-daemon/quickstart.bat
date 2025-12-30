@@ -44,7 +44,15 @@ REM Check if config exists
 if not exist "config\daemon.yaml" (
     echo Creating default configuration...
     if not exist "config" mkdir config
-    copy config\daemon.yaml.example config\daemon.yaml
+    
+    if exist "config\daemon.yaml.example" (
+        copy config\daemon.yaml.example config\daemon.yaml
+    ) else (
+        echo Error: config\daemon.yaml.example not found
+        pause
+        exit /b 1
+    )
+    
     echo.
     echo WARNING: Please edit config\daemon.yaml and update the log_file_path
     echo          with your actual MTG Arena Player.log location
