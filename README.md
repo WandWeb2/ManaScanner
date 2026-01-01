@@ -87,7 +87,7 @@ For developers and early adopters:
 2. **Install dependencies**
    ```bash
    # Instructions will be added as the project develops
-   # Example: npm install, pip install -r requirements.txt, etc.
+   # Example: npm install, python -m pip install -r requirements.txt, etc.
    ```
 
 3. **Build the project**
