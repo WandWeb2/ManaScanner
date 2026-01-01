@@ -28,7 +28,7 @@ A Python daemon that monitors the MTG Arena Player.log file and automatically ex
 
 2. **Install dependencies**:
    ```bash
-   pip install -r requirements.txt
+   python -m pip install -r requirements.txt
    ```
 
 3. **Configure the daemon**:
@@ -190,7 +190,7 @@ This is not an error. The daemon will fall back to polling mode, which works fin
 
 To use file system events instead:
 ```bash
-pip install watchdog
+python -m pip install watchdog
 ```
 
 ### File not found errors

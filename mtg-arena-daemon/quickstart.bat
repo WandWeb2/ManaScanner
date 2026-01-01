@@ -28,7 +28,7 @@ if not exist "daemon.py" (
 
 REM Install dependencies
 echo Installing dependencies...
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 
 if errorlevel 1 (
     echo Error: Failed to install dependencies

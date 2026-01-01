@@ -25,7 +25,7 @@ fi
 
 # Install dependencies
 echo "Installing dependencies..."
-pip3 install -r requirements.txt
+python3 -m pip install -r requirements.txt
 
 if [ $? -ne 0 ]; then
     echo "Error: Failed to install dependencies"
